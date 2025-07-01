@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tô de Férias - A Revolução Inteligente do Turismo no Brasil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-umbrella-beach text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">TÔ DE FÉRIAS</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#solucao" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Solução</a>
+                    <a href="#funcionalidades" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Funcionalidades</a>
+                    <a href="#modelo" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Modelo</a>
+                    <a href="#prognostico" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Prognóstico</a>
+                    <a href="#parceria" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-300">Seja Parceiro</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#solucao" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Solução</a>
+                <a href="#funcionalidades" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Funcionalidades</a>
+                <a href="#modelo" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Modelo</a>
+                <a href="#prognostico" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Prognóstico</a>
+                <a href="#parceria" class="bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-700">Seja Parceiro</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg hero-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">A REVOLUÇÃO INTELIGENTE DO TURISMO NO BRASIL</h1>
+                    <p class="text-xl mb-8">Conectamos turistas a experiências autênticas e comércios locais a clientes qualificados através de inteligência artificial.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#parceria" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold text-center hover:bg-gray-100 transition duration-300">Seja Parceiro</a>
+                        <a href="#solucao" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-white hover:text-indigo-600 transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-96 md:w-80 md:h-112">
+                        <div class="absolute w-full h-full bg-white rounded-3xl shadow-2xl overflow-hidden animate-float">
+                            <div class="h-8 bg-gray-200 flex items-center px-3">
+                                <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="p-4">
+                                <div class="bg-indigo-100 rounded-xl p-3 mb-3">
+                                    <h3 class="font-bold text-indigo-800">Seu Roteiro Personalizado</h3>
+                                    <p class="text-sm text-indigo-600">Gerado especialmente para você!</p>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-indigo-200 flex items-center justify-center mr-3">
+                                        <i class="fas fa-sun text-indigo-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Dia 1 - Praia e Aventura</h4>
+                                        <p class="text-xs text-gray-500">Sol e 28°C - Perfeito para praia!</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                            <i class="fas fa-utensils text-blue-600 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium text-gray-800">Café da Manhã</h5>
+                                            <p class="text-xs text-gray-500">Padaria Artesanal - 8:30</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                            <i class="fas fa-umbrella-beach text-purple-600 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium text-gray-800">Praia Central</h5>
+                                            <p class="text-xs text-gray-500">9:30 - Leve protetor solar</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                            <i class="fas fa-hiking text-green-600 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium text-gray-800">Trilha Ecológica</h5>
+                                            <p class="text-xs text-gray-500">14:00 - Vista tênis confortável</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="bg-white py-16" id="solucao">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Cenário Atual: Desafios e Oportunidades</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">O setor de turismo no Brasil, vibrante e em constante crescimento, enfrenta desafios críticos que nossa solução aborda diretamente.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Para o Turista</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Dificuldade em encontrar roteiros autênticos e personalizados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Sobrecarga de informações desorganizadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Falta de adaptação a condições variáveis como o clima</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Experiências genéricas que não refletem o perfil do viajante</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-store text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Para o Comércio Local</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Alta competitividade com baixa diferenciação</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Falta de visibilidade digital eficiente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Ineficiência na captação de turistas qualificados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span>Dificuldade em se destacar em meio à concorrência</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-indigo-50 rounded-xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-4">Nossa Solução Inovadora</h3>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">O App "Tô de Férias"</h2>
+                        <p class="text-lg text-gray-700 mb-6">Uma plataforma inteligente e escalável, concebida para transformar a experiência turística e impulsionar o comércio local através de tecnologia avançada.</p>
+                        <div class="flex space-x-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-brain text-indigo-600"></i>
+                                </div>
+                                <span class="font-medium">IA Avançada</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-bolt text-indigo-600"></i>
+                                </div>
+                                <span class="font-medium">Tempo Real</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-user-tag text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-900">Para o Turista</h4>
+                                    <p class="text-gray-600">Jornada de descoberta com roteiros dinâmicos e personalizados por IA, adaptados em tempo real ao clima, perfil do viajante e atrações locais.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-store-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-900">Para o Comércio Local</h4>
+                                    <p class="text-gray-600">Plataforma robusta de visibilidade que conecta estabelecimentos diretamente ao público-alvo qualificado, maximizando presença e faturamento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Nossos Objetivos Estratégicos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Alinhados com as necessidades do mercado e potencializados por tecnologia de ponta</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl card-hover transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-user-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Personalização Extrema</h3>
+                    <p class="text-gray-300 text-center">Entregar experiências turísticas hiperpersonalizadas através de algoritmos avançados de IA, considerando clima, perfil do usuário e localização geográfica.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl card-hover transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Monetização Sustentável</h3>
+                    <p class="text-gray-300 text-center">Gerar receita recorrente e diversificada por meio de modelos B2C (roteiros premium) e B2B (parcerias estratégicas com empresas locais).</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl card-hover transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-expand text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Escalabilidade Acelerada</h3>
+                    <p class="text-gray-300 text-center">Expandir nossa operação de forma ágil para dezenas de cidades turísticas em todo o território nacional, capitalizando o vasto potencial do mercado brasileiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-16" id="funcionalidades">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Funcionalidades Chave</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A inteligência por trás da experiência turística perfeita</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-route text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Roteiros Dinâmicos</h3>
+                    <p class="text-gray-600">Geração de roteiros otimizados com base em dados climáticos em tempo real e perfil do viajante (família, casal, individual, amigos).</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marked-alt text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mapa Interativo</h3>
+                    <p class="text-gray-600">Otimização de tempo e percurso com visualização clara de todas as atrações e estabelecimentos parceiros.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Guia de Serviços</h3>
+                    <p class="text-gray-600">Listagem detalhada de hotéis, pousadas, bares, restaurantes, lojas e passeios com avaliações e informações úteis.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-medal text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Visibilidade Premium</h3>
+                    <p class="text-gray-600">Empresas parceiras com destaque visual e prioridade de inclusão nos roteiros sugeridos pela IA.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-alt text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Central de Eventos</h3>
+                    <p class="text-gray-600">Área exclusiva para divulgação de eventos sazonais e ofertas especiais dos estabelecimentos parceiros.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm card-hover transition duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-tachometer-alt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Painel Administrativo</h3>
+                    <p class="text-gray-600">Gestão intuitiva de dados, parceiros e conteúdo com análises e métricas de desempenho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Section -->
+    <section class="bg-gray-50 py-16" id="modelo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Modelo de Monetização</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Dupla fonte de receita para sustentabilidade e crescimento</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-blue-600 px-6 py-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">B2C – Turistas</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plano</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Benefícios</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Roteiro Express</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39,90</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Roteiro básico, sem IA, limitado.</td>
+                                    </tr>
+                                    <tr class="bg-blue-50">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">Roteiro Inteligente</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-800">R$ 69,90</td>
+                                        <td class="px-6 py-4 text-sm text-blue-800">IA + Clima + Otimização de Dias e Mapa.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Roteiro Premium</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 119,90</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Tudo acima + Perfil Personalizado e Roteiro Temático.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-purple-600 px-6 py-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-store text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">B2B – Empresas Locais</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plano</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor/ano</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Benefícios</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Básico</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 3.000</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Presença no app com link, descrição e localização.</td>
+                                    </tr>
+                                    <tr class="bg-purple-50">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-purple-900">Destaque</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-purple-800">R$ 4.800</td>
+                                        <td class="px-6 py-4 text-sm text-purple-800">Destaque visual + Prioridade nos Roteiros da IA.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Premium Parceiro</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 6.000</td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">Geração de Leads + Cupons Exclusivos + Campanhas.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-16">
+                <div class="bg-indigo-600 px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mr-4">
+                            <i class="fas fa-plus-circle text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Extras de Monetização</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-900 mb-2">Espaços Publicitários</h4>
+                            <p class="text-sm text-gray-600 mb-2">Banners, pop-ups contextuais</p>
+                            <p class="text-indigo-600 font-bold">R$ 200 a R$ 500/mês</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-900 mb-2">Recomendação Top</h4>
+                            <p class="text-sm text-gray-600 mb-2">Inserção nos roteiros como "recomendação top"</p>
+                            <p class="text-indigo-600 font-bold">R$ 1.000/mês</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-900 mb-2">Página Exclusiva</h4>
+                            <p class="text-sm text-gray-600 mb-2">Vitrine digital aprofundada</p>
+                            <p class="text-indigo-600 font-bold">R$ 500</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-900 mb-2">Eventos Especiais</h4>
+                            <p class="text-sm text-gray-600 mb-2">Patrocínio e divulgação de eventos</p>
+                            <p class="text-indigo-600 font-bold">R$ 1.500/evento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Forecast Section -->
+    <section class="bg-white py-16" id="prognostico">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Prognóstico Financeiro</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Estudo de caso em destinos turísticos estratégicos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-umbrella-beach text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Garopaba (Dez-Mar)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Público Estimado</p>
+                            <p class="font-bold">120.000 turistas</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Taxa de Conversão</p>
+                            <p class="font-bold">5% = 6.000 usuários</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Parceiros B2B</p>
+                            <p class="font-bold">30 comércios</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-500">Receita Estimada (4 meses)</p>
+                            <p class="text-2xl font-bold text-blue-600">R$ 627.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-city text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Florianópolis (Nov-Abr)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Público Estimado</p>
+                            <p class="font-bold">2.500.000 turistas</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Taxa de Conversão</p>
+                            <p class="font-bold">3% = 75.000 usuários</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Parceiros B2B</p>
+                            <p class="font-bold">525 comércios</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-500">Receita Estimada (6 meses)</p>
+                            <p class="text-2xl font-bold text-purple-600">R$ 8.160.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-building text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Balneário Camboriú (Nov-Abr)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Público Estimado</p>
+                            <p class="font-bold">2.200.000 turistas</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Taxa de Conversão</p>
+                            <p class="font-bold">3% = 66.000 usuários</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Parceiros B2B</p>
+                            <p class="font-bold">470 comércios</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-500">Receita Estimada (6 meses)</p>
+                            <p class="text-2xl font-bold text-green-600">R$ 7.209.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-4">Escalabilidade Nacional</h3>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">O Brasil é Nosso Playground!</h2>
+                        <p class="text-lg text-gray-700 mb-6">O modelo de negócio do "Tô de Férias" é altamente replicável e adaptável, permitindo uma expansão rápida e eficiente para múltiplos destinos turísticos.</p>
+                        <div class="bg-white p-4 rounded-lg inline-block">
+                            <p class="text-indigo-600 font-bold text-xl">Potencial de Faturamento Anual Superior a R$ 50 Milhões com apenas 10 cidades ativas!</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">Cidades com Potencial Imediato:</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Balneário Camboriú</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Florianópolis</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Imbituba</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Bombinhas</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Urubici</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Joinville</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Praia do Rosa</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-plus-circle text-indigo-500 mr-2"></i>
+                                    <span>E dezenas de outros</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Status Section -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Status Atual do Projeto</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Pronto para decolar e transformar o turismo brasileiro</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">MVP Estruturado</h3>
+                    <p class="text-gray-300">A base tecnológica e funcional está sólida e pronta para expansão.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Protótipo Navegável</h3>
+                    <p class="text-gray-300">A experiência do usuário já pode ser testada e validada.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Estrutura Backend</h3>
+                    <p class="text-gray-300">A inteligência e a gestão por trás do aplicativo estão operacionais.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pronto para Validação</h3>
+                    <p class="text-gray-300">Preparados para lançamento piloto em Garopaba e coleta de dados reais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Opportunity Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">A Oportunidade de Investimento</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Por que investir no "Tô de Férias" agora?</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-indigo-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6">Vantagens Competitivas</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-chart-pie text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Alta Margem de Lucratividade</h4>
+                                <p class="text-gray-600">Modelo de negócio com excelente retorno sobre o investimento.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-expand text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Produto Digital Escalável</h4>
+                                <p class="text-gray-600">Crescimento exponencial com custos marginais decrescentes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-money-bill-wave text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Fluxos de Receita Robustos</h4>
+                                <p class="text-gray-600">Monetização dupla (B2C + B2B) garante estabilidade e diversificação.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-indigo-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6">Diferenciais Estratégicos</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Inovação Disruptiva</h4>
+                                <p class="text-gray-600">Ausência de concorrentes diretos que integrem clima, IA e roteiro automático de forma tão completa.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-chess-queen text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Prime-Mover Advantage</h4>
+                                <p class="text-gray-600">Oportunidade de estabelecer padrão no mercado de turismo inteligente.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-network-wired text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Potencial de Franquia</h4>
+                                <p class="text-gray-600">Possibilidade de expansão através de um modelo de franquia regional de turismo digital.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="gradient-bg text-white py-16" id="parceria">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Proposta de Parceria</h2>
+                <p class="text-xl max-w-3xl mx-auto">Construindo o futuro do turismo brasileiro juntos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Estamos buscando:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Investidores Estratégicos</h4>
+                                <p class="text-white text-opacity-80">Junte-se a nós para capturar uma fatia significativa deste mercado bilionário.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Parceiros Locais</h4>
+                                <p class="text-white text-opacity-80">Comércios, associações de turismo, guias – vamos criar sinergias e crescer juntos!</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Desenvolvedores</h4>
+                                <p class="text-white text-opacity-80">Interessados em equity? Faça parte da equipe que está construindo a próxima grande inovação no turismo.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Agências e Guias</h4>
+                                <p class="text-white text-opacity-80">Potencialize seus serviços e alcance com nossa plataforma inteligente.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Entre em Contato</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-gray-700">Interesse</label>
+                            <select id="interest" name="interest" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                <option>Investidor</option>
+                                <option>Parceiro Comercial</option>
+                                <option>Desenvolvedor</option>
+                                <option>Agência/Guia</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                            <textarea id="message" name="message" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Transforme o Turismo Brasileiro Conosco</h3>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">Junte-se à revolução inteligente do turismo e seja parte deste crescimento extraordinário</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300">Agende uma Demonstração</a>
+                    <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-indigo-600 transition duration-300">Baixe o Pitch Deck</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-umbrella-beach text-indigo-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">TÔ DE FÉRIAS</span>
+                    </div>
+                    <p class="text-gray-400">A revolução inteligente do turismo no Brasil.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#solucao" class="text-gray-400 hover:text-white">Solução</a></li>
+                        <li><a href="#funcionalidades" class="text-gray-400 hover:text-white">Funcionalidades</a></li>
+                        <li><a href="#modelo" class="text-gray-400 hover:text-white">Modelo</a></li>
+                        <li><a href="#prognostico" class="text-gray-400 hover:text-white">Prognóstico</a></li>
+                        <li><a href="#parceria" class="text-gray-400 hover:text-white">Parceria</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-indigo-400"></i>
+                            <span>Florianópolis, SC - Brasil</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-indigo-400"></i>
+                            <span>contato@todeferias.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-indigo-400"></i>
+                            <span>+55 (48) 99999-9999</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Assine para receber atualizações sobre nosso lançamento.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Tô de Férias. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
